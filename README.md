@@ -1,7 +1,7 @@
 # Solana blockchain datacamp @HeavyDutyBuilders
 
 > [!IMPORTANT]  
-> Se va a estructurar git de manera que cada branch contiene un reto, quedando siendo la rama master la última y actual.
+> **Se va a estructurar git de manera que cada branch contiene un reto, siendo la rama master la última tarea y actual estado de desarrollo.**
 
 ## Reto semana 1: Crear app utilizando Angular y NX
 *Bienvenido al primer desafío del Heavy Duty Camp. Este será un momento crucial para aplicar los conocimientos que hemos adquirido en la clase teórica. Nuestro objetivo es crear una aplicación utilizando Angular y preparar el terreno para las próximas sesiones. A continuación, se detallan los pasos a seguir:*
@@ -24,5 +24,5 @@ Tras conectar una billetera, el saldo debe mostrarse en la BalancePage, utilizan
 + **Integración con Shyft.**
 Para lograr la integración con Shyft, necesitarás crear un servicio que se comunique con sus APIs. Esto implica crear una cuenta en Shyft y generar una clave API. Utiliza el Servicio API de Shyft para obtener la información de la cuenta de la billetera conectada.
 
-> [!NOTE]
-> Este desafío no solo pondrá a prueba tus habilidades de programación, sino que también te permitirá trabajar con tecnologías reales de integración de billeteras y servicios de API, una habilidad invaluable en el desarrollo de aplicaciones modernas. ¡Esperamos ver tus soluciones innovadoras!
+	> [!NOTE]
+	> Este desafío no solo pondrá a prueba tus habilidades de programación, sino que también te permitirá trabajar con tecnologías reales de integración de billeteras y servicios de API, una habilidad invaluable en el desarrollo de aplicaciones modernas. ¡Esperamos ver tus soluciones innovadoras!
