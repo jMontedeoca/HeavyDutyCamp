@@ -5,10 +5,11 @@ import { HdWalletMultiButtonComponent } from "@heavy-duty/wallet-adapter-materia
 import { ShyftApiService } from "./shyft-api.service";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { computedAsync } from "ngxtension/computed-async";
+import { MatAnchor } from "@angular/material/button";
 
 @Component({
   standalone: true,
-  imports: [RouterModule, HdWalletMultiButtonComponent],
+  imports: [RouterModule, HdWalletMultiButtonComponent, MatAnchor],
   selector: 'heavyduty-root',
   templateUrl: './app.component.html',
 })
