@@ -24,5 +24,5 @@ Tras conectar una billetera, el saldo debe mostrarse en la BalancePage, utilizan
 + **Integración con Shyft.**
 Para lograr la integración con Shyft, necesitarás crear un servicio que se comunique con sus APIs. Esto implica crear una cuenta en Shyft y generar una clave API. Utiliza el Servicio API de Shyft para obtener la información de la cuenta de la billetera conectada.
 
-> [!INFO]
+> [!NOTE]
 > Este desafío no solo pondrá a prueba tus habilidades de programación, sino que también te permitirá trabajar con tecnologías reales de integración de billeteras y servicios de API, una habilidad invaluable en el desarrollo de aplicaciones modernas. ¡Esperamos ver tus soluciones innovadoras!
