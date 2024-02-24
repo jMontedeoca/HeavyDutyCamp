@@ -23,4 +23,5 @@ export class ShyftApiService {
 		}>(url.toString(), { headers: this._header })
 		.pipe(map((response) => response.result));
 	}
+
 }
