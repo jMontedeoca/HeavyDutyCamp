@@ -9,7 +9,6 @@ export class ShyftApiService {
 	// private readonly _mint = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'; //usdc
 	private readonly _mint = '7EYnhQoR9YM3N7UoaKRoA44Uy8JeaZV3qyouov87awMs'; //silly
 	
-	
 
 	getAccount(publicKey: string | undefined | null) {
 		if(!publicKey) {
