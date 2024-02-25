@@ -27,7 +27,7 @@ export class ShyftApiService {
 		.pipe(map((response) => response.result));
 	}
 
-	getTransaction(publicKey: string | undefined | null){
+	getTransactions(publicKey: string | undefined | null){
 		if(!publicKey) {
 			return of(null);
 		}
@@ -37,9 +37,9 @@ export class ShyftApiService {
 		url.searchParams.set('account', publicKey);
 
 		return this._httpClient.get<{
-			result: { timestamp: string;
-					  actions: { info: {sender: string; receiver: string; amount: number};
-								 type: string} };
+			result: { timestamp: string; type: string
+					  signers: string;
+					  status: string; }[]
 		}>(url.toString(), {headers: this._header})
 		.pipe(map((response) => response.result));
 	}
