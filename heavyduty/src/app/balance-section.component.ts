@@ -10,9 +10,7 @@ import { MatCard } from "@angular/material/card";
 	imports: [MatCard],
 	template: `
 		<mat-card class="px-24 py-5 bg-white bg-opacity-5">
-			<p class ="text-center text-3xl">
-				Balance
-			</p>
+			<p class ="text-center text-3xl">Balance</p>
 			@if (!account()) {
 				<p class="text-center">Wallet no conectada.</p>
 			}

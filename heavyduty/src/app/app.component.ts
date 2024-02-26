@@ -6,6 +6,9 @@ import { WalletStore } from '@heavy-duty/wallet-adapter';
 import { ShyftApiService } from "./shyft-api.service";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { computedAsync } from "ngxtension/computed-async";
+import { Dialog } from '@angular/cdk/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { TransferModalComponent } from './transfer-modal.component';
 
 @Component({
   standalone: true,
@@ -39,6 +42,7 @@ import { computedAsync } from "ngxtension/computed-async";
         </ul>
       </nav> -->
     </header>
+    <button (click)="onTransfer()">Transferir</button>
 
     <main>
       <router-outlet></router-outlet>
@@ -50,9 +54,14 @@ export class AppComponent {
 //   private readonly _shyftApiService = inject(ShyftApiService);
 //   private readonly _walletStore = inject(WalletStore);
 //   private readonly _publicKey = toSignal(this._walletStore.publicKey$);
+  private readonly _matDialog = inject(MatDialog);
 
 // readonly  account = computedAsync(
 //   () => this._shyftApiService.getAccount(this._publicKey()?.toBase58()),
 // { requireSync: true },
 // );
+
+  onTransfer()  {
+    this._matDialog.open(TransferModalComponent);
+  }
 }

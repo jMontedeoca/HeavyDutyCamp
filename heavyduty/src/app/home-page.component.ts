@@ -11,6 +11,7 @@ import { BalanceSectionComponent } from "./balance-section.component";
 		<div class="w-1/2"><balance-section></balance-section></div>
 		<div class="w-1/2"><transactions-section></transactions-section></div>
 	</div>
+	
 	<bob-features-section></bob-features-section>
 	`,
 	standalone: true,

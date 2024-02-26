@@ -47,8 +47,8 @@ Este desafío bono no solo pone a prueba tus habilidades de desarrollo, sino que
 ## Reto Semana 3: Envío de Transferencias
 *Amplía tu aplicación para permitir transferencias de fondos. Trabaja en una nueva rama, actualiza el adaptador ``@heavy-duty/wallet-adapter`` a la versión 0.8.3, e instala ``@solana/spl-token`` y ``@heavy-duty/spl-utils``.*
 
-+ **Instrucciones**
-Actualiza el Adaptador: Asegura la funcionalidad con la versión 0.8.3 de @heavy-duty/wallet-adapter.
++ **Actualiza el Adaptador:**
+Asegura la funcionalidad con la versión 0.8.3 de @heavy-duty/wallet-adapter.
 
 + **Instalaciones Requeridas:**
 Incorpora `@solana/spl-token` y `@heavy-duty/spl-utils` para manejar tokens SPL en Solana.
