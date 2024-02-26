@@ -1,11 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MatAnchor } from "@angular/material/button";
-import { HdWalletMultiButtonComponent } from "@heavy-duty/wallet-adapter-material";
-import { WalletStore } from '@heavy-duty/wallet-adapter';
-import { ShyftApiService } from "./shyft-api.service";
-import { toSignal } from "@angular/core/rxjs-interop";
-import { computedAsync } from "ngxtension/computed-async";
+import { MatAnchor } from '@angular/material/button';
+import { HdWalletMultiButtonComponent } from '@heavy-duty/wallet-adapter-material';
+import { ConnectionStore, WalletStore } from '@heavy-duty/wallet-adapter';
+import { ShyftApiService } from './shyft-api.service';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { computedAsync } from 'ngxtension/computed-async';
+import { Dialog } from '@angular/cdk/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { TransferModalComponent } from './transfer-modal.component';
 
 @Component({
   standalone: true,
@@ -45,14 +48,18 @@ import { computedAsync } from "ngxtension/computed-async";
     </main>
   `,
 })
+export class AppComponent implements OnInit {
+  private readonly _shyftApiService = inject(ShyftApiService);
+  // private readonly _walletStore = inject(WalletStore);
+  // private readonly _publicKey = toSignal(this._walletStore.publicKey$);
+  private readonly _connectionStore = inject(ConnectionStore);
 
-export class AppComponent {
-//   private readonly _shyftApiService = inject(ShyftApiService);
-//   private readonly _walletStore = inject(WalletStore);
-//   private readonly _publicKey = toSignal(this._walletStore.publicKey$);
+  // readonly account = computedAsync(
+  //   () => this._shyftApiService.getAccount(this._publicKey()?.toBase58()),
+  //   { requireSync: true },
+  // );
 
-// readonly  account = computedAsync(
-//   () => this._shyftApiService.getAccount(this._publicKey()?.toBase58()),
-// { requireSync: true },
-// );
+  ngOnInit() {
+    this._connectionStore.setEndpoint(this._shyftApiService.getEndpoint());
+  }
 }
